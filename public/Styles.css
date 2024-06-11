@@ -1,3 +1,4 @@
+/* Common styles */
 
 body {
     font-family: Arial, sans-serif;
@@ -83,6 +84,7 @@ header img {
     position: relative;
     display: inline-block;
 }
+
 .cart-counter {
     position: absolute;
     top: 8px;
@@ -105,57 +107,110 @@ footer a {
     color: white;
     padding: 0 20px;
 }
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-    header, .navbar, footer {
-        flex-direction: column;
+
+/* Media Queries for Responsive Design */
+
+/* Small devices (portrait phones, less than 600px) */
+@media only screen and (max-width: 600px) {
+    header h1 {
+        font-size: 32px;
     }
+
+    header img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .navbar {
+        top: 100px;
+        font-size: medium;
+    }
+
+    .navbar a {
+        font-size: 16px;
+        padding: 0 10px;
+    }
+
+    .navbar .cart-logo {
+        width: 25px;
+        height: 25px;
+    }
+
+    .cart-counter {
+        font-size: 12px;
+    }
+
+    .nav-space {
+        height: 150px;
+    }
+}
+
+/* Medium devices (landscape phones, 600px and above) */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
     header h1 {
         font-size: 36px;
     }
+
+    header img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .navbar {
+        top: 110px;
+        font-size: large;
+    }
+
     .navbar a {
         font-size: 18px;
+        padding: 0 15px;
     }
-    /* ... other tablet styles ... */
-}
 
-/* Styles for large tablets (e.g., iPad Pro) */
-@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) {
-    header, .navbar, footer {
-        flex-direction: column;
+    .navbar .cart-logo {
+        width: 28px;
+        height: 28px;
     }
-    header h1 {
-        font-size: 40px;
-    }
-    .navbar a {
-        font-size: 20px;
-    }
-    /* ... other large tablet styles ... */
-}
 
-/* Styles for smartphones (e.g., iPhone 10+, Android devices) */
-@media only screen and (max-device-width: 414px) {
-    header, .navbar, footer {
-        flex-direction: column;
-    }
-    header h1 {
-        font-size: 28px;
-    }
-    .navbar a {
-        font-size: 16px;
-    }
-    /* ... other smartphone styles ... */
-}
-
-/* Styles for smaller smartphones (e.g., older iPhone models) */
-@media only screen and (max-device-width: 375px) {
-    header, .navbar, footer {
-        flex-direction: column;
-    }
-    header h1 {
-        font-size: 24px;
-    }
-    .navbar a {
+    .cart-counter {
         font-size: 14px;
     }
-    /* ... other smaller smartphone styles ... */
+
+    .nav-space {
+        height: 160px;
+    }
+}
+
+/* Large devices (tablets, 1024px and above) */
+@media only screen and (min-width: 1025px) {
+    header h1 {
+        font-size: 44px;
+    }
+
+    header img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .navbar {
+        top: 120px;
+        font-size: large;
+    }
+
+    .navbar a {
+        font-size: 20px;
+        padding: 0 20px;
+    }
+
+    .navbar .cart-logo {
+        width: 30px;
+        height: 30px;
+    }
+
+    .cart-counter {
+        font-size: 16px;
+    }
+
+    .nav-space {
+        height: 175px;
+    }
 }
